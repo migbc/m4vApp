@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <title>Page Title</title> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="./renderer.js"></script>
+    <script src="./tvdbApi.js"></script>
+    <script src="./file.js"></script>
+    <!-- <script src="./download.js"></script> -->
+    <!-- <script>const { foo } = require('./tvdbapi.js')</script> -->
+</head>
+<body>
+    <div id="viewport">
+        <!-- Sidebar -->
+        <div id="sidebar">
+          <header>
+            <!-- <a href="#">My App</a> -->
+            <link rel="stylesheet" href="css.css" />
+          </header>
+          <ul class="nav">
+            <li>
+              <a href="#">
+                <i class="zmdi zmdi-widgets"></i> Overview
+              </a>
+            </li>
+            <li>
+              <a href="./index_tvdb.html">
+                <i class="zmdi zmdi-view-dashboard"></i> Série - TVDB
+              </a>
+            </li>
+            <li>
+              <a href="./index_tmdb.htmls">
+                <i class="zmdi zmdi-link"></i> Film - TMDB
+              </a>
+            </li>
+      
+            <li>
+              <a href="#">
+                <i class="zmdi zmdi-calendar"></i> Calendrier
+              </a>
+            </li>
+      
+          </ul>
+        </div>
+        <div id="content">
+    <button id="selectFile" onclick="selectFile()">Open</button>
+    <button id="callTVDB" onclick="callTVDB()">tvdb</button>
+    <hr />
+    Titre<input id="nameFile"></input>
+    <br>
+    Saison<input id="seasonFile"></input>
+    Episode<input id="episodeFile"></input>
+    <hr />
+    <select size="6" id='listeSerie' width='100' onclick="change()">
+    </select>
+    <!-- <picture>
+        <source srcset="https://thetvdb.com/banners/posters/267543-1.jpg" >
+            <media="(max-width: 50px)"> -->
+    <img id="poster" src="" width='100' height="100" />
+    <!-- </picture> -->
+    <hr />
+    <button id="callTVDB2" onclick="callTVDB2()">ok</button>
+    <button id="calCreate" onclick="callCreate()">Create</button>
+    <hr />
+    <label for="src">src</label>
+    <input type="text" id="src" name="src" required minlength="4" maxlength="80" size="80">
+    <br />
+    <label for="srt">srt</label>
+    <input type="text" id="srt" name="srt" required minlength="4" maxlength="80" size="80">
+    </div>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>.
+</body>
+</html>
